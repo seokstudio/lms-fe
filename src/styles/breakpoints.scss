@@ -1,0 +1,50 @@
+@mixin tablet {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop-m {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin lineLimit($fontSize, $lineHeight, $lineLimit) {
+  font-size: ($fontSize);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-height: $lineHeight;
+  -webkit-line-clamp: $lineLimit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+@mixin clamp($count-lines) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $count-lines;
+  -webkit-box-orient: vertical;
+}
