@@ -1,8 +1,14 @@
-import { generateAlternateLinks, LanguageProvider } from '@inlang/paraglide-next'
-import { FC } from 'react'
-import { strategy } from '@/libs/localization/i18n'
 import { Metadata, ResolvingMetadata, type Viewport } from 'next'
-import { languageTag } from '@/libs/localization/paraglide/runtime'
+import { ThemeProvider as NextThemesProvider } from 'next-themes'
+import { generateAlternateLinks, LanguageProvider } from '@inlang/paraglide-next'
+import { NextUIProvider } from '@nextui-org/system'
+
+import { FC, ReactNode } from 'react'
+
+import { LayoutComponent } from '@/app/modules/layout'
+import { strategy } from '@/core/localization/i18n'
+import { languageTag } from '@/core/localization/paraglide/runtime'
+import { mainFont } from '@/fonts'
 
 // metadata
 export const generateMetadata = (_params: never, parent: ResolvingMetadata): Metadata => {
@@ -46,27 +52,25 @@ export const viewport: Viewport = {
 
 // interface
 interface IProviderProps {
-
+  children: ReactNode
 }
 
 // component
-const RootLayout: FC<Readonly<IProviderProps>> =  ({ children }) => {
-
-
+const Providers: FC<Readonly<IProviderProps>> = ({ children }) => {
   // return
   return (
-    <LanguageProvid>
+    <LanguageProvider>
       <html lang={languageTag()} suppressHydrationWarning>
-      <body className={mainFont.className}>
-      <NextuiProvider locale={languageTag()}>
-        <LayoutComponent restrictions={restrictions} layout={layout}>
-          {children}
-        </LayoutComponent>
-      </NextuiProvider>
-      </body>
+        <body className={mainFont.className}>
+          <NextUIProvider locale={languageTag()}>
+            <NextThemesProvider defaultTheme={'dark'} attribute={'class'}>
+              <LayoutComponent>{children}</LayoutComponent>
+            </NextThemesProvider>
+          </NextUIProvider>
+        </body>
       </html>
-    </LanguageProvid>
+    </LanguageProvider>
   )
 }
 
-export default RootLayout
+export default Providers

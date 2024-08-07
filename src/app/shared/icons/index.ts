@@ -1,0 +1,8 @@
+export { default as IconBookClosed } from './book-closed.svg'
+export { default as IconCalendar } from './calendar-date.svg'
+export { default as IconChart } from './chart.svg'
+export { default as IconFileCheckmark } from './file-check.svg'
+export { default as IconList } from './list.svg'
+export { default as IconQuestionTooltip } from './question-tooltip.svg'
+export { default as IconSearch } from './search.svg'
+export { default as IconUsers } from './users.svg'
