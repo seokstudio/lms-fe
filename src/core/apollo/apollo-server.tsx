@@ -5,7 +5,7 @@ import {
   registerApolloClient,
 } from '@apollo/experimental-nextjs-app-support'
 
-import { languageTag } from '@/core/localization/paraglide/runtime'
+import { languageTag } from '@/libs/localization/paraglide/runtime'
 
 // apollo server client
 export const { getClient } = registerApolloClient(() => {

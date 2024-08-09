@@ -6,9 +6,9 @@ import { NextUIProvider } from '@nextui-org/system'
 import { FC, ReactNode } from 'react'
 
 import { LayoutComponent } from '@/app/modules/layout'
-import { strategy } from '@/core/localization/i18n'
-import { languageTag } from '@/core/localization/paraglide/runtime'
 import { mainFont } from '@/fonts'
+import { strategy } from '@/libs/localization/i18n'
+import { languageTag } from '@/libs/localization/paraglide/runtime'
 
 // metadata
 export const generateMetadata = (_params: never, parent: ResolvingMetadata): Metadata => {

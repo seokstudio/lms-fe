@@ -1,6 +1,6 @@
-import { Button } from '@nextui-org/button'
-
 import { FC } from 'react'
+
+import { EntryFormComponent } from '@/app/shared/components/entry-form'
 
 import styles from './entry.module.scss'
 
@@ -12,33 +12,7 @@ export const EntryComponent: FC<Readonly<IEntryProps>> = () => {
   // return
   return (
     <div>
-      <Button size={'lg'} color={'primary'}>
-        entry
-      </Button>
-      <Button size={'md'} color={'default'}>
-        entry
-      </Button>
-      <Button size={'md'} color={'danger'}>
-        entry
-      </Button>
-      <Button color={'warning'}>entry</Button>
-      <Button color={'success'}>entry</Button>
-
-      <Button variant={'bordered'} color={'primary'}>
-        entry
-      </Button>
-      <Button variant={'bordered'} color={'default'}>
-        entry
-      </Button>
-      <Button variant={'bordered'} color={'danger'}>
-        entry
-      </Button>
-      <Button variant={'bordered'} color={'warning'}>
-        entry
-      </Button>
-      <Button variant={'bordered'} color={'success'}>
-        entry
-      </Button>
+      <EntryFormComponent />
     </div>
   )
 }

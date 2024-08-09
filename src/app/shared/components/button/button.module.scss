@@ -1,0 +1,11 @@
+.button {
+  font-weight: 600;
+  color: hsl(var(--nextui-content1-100));
+  font-size: 16px;
+  line-height: 1.5;
+  gap: 12px;
+
+  &.primary_color {
+    color: #ffffff !important;
+  }
+}

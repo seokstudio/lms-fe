@@ -1,65 +1,50 @@
 .custom_input {
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  color: hsl(var(--nextui-content1-100)) !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  line-height: 1.4 !important;
+  color: hsl(var(--nextui-content1)) !important;
 
   &::placeholder {
-    color: hsl(var(--nextui-primary-300)) !important;
-  }
-
-  &.with_label {
-    &::placeholder {
-      color: hsl(var(--nextui-primary-200)) !important;
-    }
-  }
-
-  &__inner_wrapper {
-    &.default {
-      height: 56px !important;
-    }
+    color: hsl(var(--nextui-content1-300));
   }
 
   &__base {
+    color: hsl(var(--nextui-content1-100));
+
     &[data-invalid='true'] {
       & [data-slot='input-wrapper'] {
-        border: 1px solid hsl(var(--nextui-danger)) !important;
+        border: 1px solid hsl(var(--nextui-danger-300));
+
+        &[data-focus="true"] {
+          outline-color: #FEE4E2;
+        }
+      }
+
+      & .custom_input__helper_wrapper {
+        color: hsl(var(--nextui-danger-500));
       }
     }
   }
 
   &__input_wrapper {
-    height: 100% !important;
-    background-color: hsl(var(--nextui-secondary-300)) !important;
-    transition: background-color var(--transition) !important;
+    border-radius: 8px;
+    border: 1px solid hsl(var(--nextui-divider));
+    background-color: hsl(var(--nextui-background));
+    box-shadow: none;
+    outline: 3px solid transparent;
+    transition: border var(--transition), outline-color var(--transition);
 
-    @include hover {
-      background-color: hsl(var(--nextui-secondary-400)) !important;
-    }
-
-    &.with_inner_label {
-      height: 54px !important;
-      padding: 8px 12px !important;
+    &[data-focus="true"] {
+      border-color: #84ADFF !important;
+      outline-color: #EBEDFF;
     }
   }
 
   &__label {
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    line-height: 1.4 !important;
-    letter-spacing: 0.14px;
+    color: hsl(var(--nextui-content1-100)) !important;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
 
-    &.with_label {
-      color: hsl(var(--nextui-primary-500)) !important;
-    }
-
-    &.with_inner_label {
-      color: hsl(var(--nextui-primary-300)) !important;
-      font-size: 12px !important;
-      line-height: 1.3 !important;
-    }
+  &__helper_wrapper {
+    padding-top: 6px;
   }
 }

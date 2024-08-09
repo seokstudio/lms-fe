@@ -11,15 +11,7 @@ interface ILayoutComponentProps {
 // component
 const LayoutComponent: FC<Readonly<ILayoutComponentProps>> = ({ children }) => {
   // return
-  return (
-    <div className={styles.layout}>
-      <span>header</span>
-
-      <div>{children}</div>
-
-      <span>footer</span>
-    </div>
-  )
+  return <>{children}</>
 }
 
 export default LayoutComponent

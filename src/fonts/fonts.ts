@@ -1,9 +1,9 @@
-import { Inter } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 
 // main font
-export const mainFont = Inter({
+export const mainFont = Open_Sans({
   weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
+  subsets: ['cyrillic', 'latin'],
   display: 'swap',
   preload: true,
 })

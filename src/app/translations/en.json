@@ -1,0 +1,13 @@
+{
+  "entry": "Вхід",
+  "entry_message": "З поверненням! Будь ласка, введіть свої дані",
+  "email": "Електронна пошта",
+  "entry_email": "Введіть свою пошту",
+  "password": "Пароль",
+  "entry_password": "Введіть пароль",
+  "remember_for_30": "Запам’ятати на 30 днів",
+  "forgot_password": "Забули пароль?",
+  "entry_with_google": "Війдіть з Google",
+  "do_not_signed_up": "Ще не зареєстровані?",
+  "do_sign_up": "Зареєструватись"
+}
