@@ -63,7 +63,7 @@ const Providers: FC<Readonly<IProviderProps>> = ({ children }) => {
       <html lang={languageTag()} suppressHydrationWarning>
         <body className={mainFont.className}>
           <NextUIProvider locale={languageTag()}>
-            <NextThemesProvider defaultTheme={'dark'} attribute={'class'}>
+            <NextThemesProvider defaultTheme={'light'} attribute={'class'}>
               <LayoutComponent>{children}</LayoutComponent>
             </NextThemesProvider>
           </NextUIProvider>

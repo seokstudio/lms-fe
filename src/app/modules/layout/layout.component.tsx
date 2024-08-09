@@ -1,5 +1,4 @@
 'use client'
-
 import { FC, ReactNode } from 'react'
 
 import styles from './layout.module.scss'
@@ -16,7 +15,7 @@ const LayoutComponent: FC<Readonly<ILayoutComponentProps>> = ({ children }) => {
     <div className={styles.layout}>
       <span>header</span>
 
-      <div> {children}</div>
+      <div>{children}</div>
 
       <span>footer</span>
     </div>
